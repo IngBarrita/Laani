@@ -188,7 +188,7 @@ const calaveritas = {
 
     
 {
-  titulo: "La visita de la Catrina",
+  titulo: "La visita de la Cat",
   autor: "Cesia Nuñez Mendez",
   estrofas: [
     "Una noche muy oscura,\nla Catrina apareció,\ncon su vestido elegante\ny una sonrisa llegó.",
