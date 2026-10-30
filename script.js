@@ -39,7 +39,7 @@ const calaveritas = {
 
 {
   titulo: "La Calaca y el profe Barrita",
-  autor: "Nombre del estudiante",
+  autor: "Alejandro Santiago Zolorio",
   estrofas: [
     "En el CETIS 124,\nllegan todos tempranito,\nllegan en su moto taxi,\ntodos bien apretaditos.",
 
