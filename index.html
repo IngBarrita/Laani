@@ -1,98 +1,130 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#176b55">
-<title>LAANI | Entrena tu ortografía</title>
-<style>
-:root{--green:#176b55;--green2:#e6f4ee;--ink:#172b26;--muted:#61736d;--paper:#f5f8f6;--line:#dce7e1;--white:#fff;--red:#a73535;--redbg:#fff0ef;--gold:#855a0b;--goldbg:#fff6df;--shadow:0 8px 24px rgba(23,61,47,.07)}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}button,input,select{font:inherit}button{cursor:pointer}.app{max-width:1000px;margin:auto;padding:18px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}.brand{display:flex;align-items:center;gap:10px}.logo{width:44px;height:44px;display:grid;place-items:center;border-radius:14px;background:var(--green);color:white;font-size:23px;font-weight:800}.brand h1{font-size:1.25rem;line-height:1.1;margin:0}.brand p{margin:4px 0 0;color:var(--muted);font-size:.84rem}.pill{background:var(--green2);color:var(--green);padding:6px 10px;border-radius:999px;font-size:.8rem;font-weight:700}.hero{background:linear-gradient(130deg,#176b55,#25866a);color:white;padding:25px;border-radius:22px;box-shadow:var(--shadow);display:grid;grid-template-columns:1.4fr .6fr;gap:20px;align-items:center}.hero h2{font-size:clamp(1.5rem,4vw,2.25rem);line-height:1.12;margin:8px 0}.hero p{color:#e0f4eb;margin:0 0 18px;max-width:540px}.hero .eyebrow{font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;font-weight:800;color:#bce8d7}.hero-stat{background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.25);border-radius:18px;padding:20px;text-align:center}.hero-stat strong{display:block;font-size:2.3rem;line-height:1.2}.hero-stat span{font-size:.85rem;color:#e0f4eb}.btn{border:0;border-radius:12px;padding:11px 16px;font-weight:750;transition:transform .12s,opacity .12s}.btn:active{transform:scale(.98)}.btn-primary{background:var(--green);color:white}.hero .btn-primary{background:white;color:var(--green)}.btn-light{background:var(--green2);color:var(--green)}.btn-plain{background:transparent;color:var(--muted);border:1px solid var(--line)}.btn:disabled{opacity:.45;cursor:not-allowed}.tabs{display:flex;gap:8px;overflow:auto;padding:16px 0 12px}.tab{white-space:nowrap;border:1px solid var(--line);background:white;border-radius:12px;padding:10px 14px;color:var(--muted);font-weight:700}.tab.active{background:var(--green);border-color:var(--green);color:white}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:8px 0 18px}.card{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:18px;box-shadow:var(--shadow)}.card h3{margin:0 0 6px;font-size:1.02rem}.muted{color:var(--muted)}.small{font-size:.86rem}.metric{font-size:1.7rem;font-weight:800;letter-spacing:-.03em}.section-title{display:flex;align-items:end;justify-content:space-between;gap:12px;margin:22px 0 10px}.section-title h2{margin:0;font-size:1.25rem}.topic-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.topic{background:white;border:1px solid var(--line);border-radius:16px;padding:16px;text-align:left;color:var(--ink)}.topic:hover{border-color:var(--green)}.topic .emoji{font-size:1.5rem}.topic strong{display:block;margin:6px 0 2px}.progress{height:9px;background:#e7eeea;border-radius:99px;overflow:hidden;margin-top:10px}.progress span{height:100%;display:block;background:#2b9876;border-radius:99px;width:0}.panel{background:white;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:var(--shadow)}.panel-head{display:flex;justify-content:space-between;gap:12px;align-items:start}.question-count{font-size:.84rem;color:var(--muted);font-weight:700}.question{font-size:1.35rem;font-weight:800;margin:20px 0 16px;line-height:1.3}.answers{display:grid;gap:10px}.answer{background:white;border:1.5px solid var(--line);border-radius:12px;padding:13px 15px;text-align:left;color:var(--ink)}.answer:hover{border-color:var(--green)}.answer.correct{background:var(--green2);border-color:#2b9876}.answer.wrong{background:var(--redbg);border-color:#d56b65}.feedback{padding:14px;border-radius:12px;margin-top:14px}.feedback.good{background:var(--green2);color:#165c43}.feedback.bad{background:var(--redbg);color:#872f2b}.feedback strong{display:block;margin-bottom:3px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.field{display:grid;gap:6px;margin:12px 0}.field label{font-weight:700;font-size:.9rem}.field input,.field select{width:100%;padding:12px;border:1px solid var(--line);border-radius:11px;background:white;color:var(--ink)}.word-list{display:grid;gap:9px}.word{display:flex;justify-content:space-between;align-items:center;gap:10px;border:1px solid var(--line);border-radius:12px;padding:12px}.word strong{display:block}.word button{border:0;background:var(--redbg);color:var(--red);border-radius:8px;padding:7px 10px}.empty{padding:26px;text-align:center;color:var(--muted);border:1px dashed var(--line);border-radius:14px}.bar-row{display:grid;grid-template-columns:120px 1fr 48px;gap:10px;align-items:center;margin:12px 0}.bar-track{height:10px;border-radius:20px;background:#e8efeb;overflow:hidden}.bar-track span{display:block;height:100%;background:#278565}.bar-value{text-align:right;font-weight:800}.notice{background:var(--goldbg);color:#684807;padding:12px 14px;border-radius:12px;font-size:.88rem;margin-top:16px}.footer{text-align:center;color:var(--muted);font-size:.8rem;padding:26px 0 12px}.hidden{display:none!important}
-@media(max-width:700px){.app{padding:12px}.hero{grid-template-columns:1fr;padding:21px}.hero-stat{display:flex;align-items:center;justify-content:center;gap:12px;padding:12px}.hero-stat strong{font-size:1.8rem}.grid{grid-template-columns:repeat(2,1fr)}.topic-grid{grid-template-columns:1fr}.panel{padding:17px}.question{font-size:1.2rem}.bar-row{grid-template-columns:90px 1fr 40px}.top{align-items:flex-start}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#21132f">
+  <meta name="description" content="Calaveritas literarias de los grupos 1F, 3F y 3C del CETIS 124, Tlacolula de Matamoros, Oaxaca.">
+  <title>Calaveritas Literarias | CETIS 124</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="app">
-<header class="top"><div class="brand"><div class="logo">T</div><div><h1>Tíldero</h1><p>Entrena tu ortografía, paso a paso</p></div></div><span class="pill">Versión 1.0</span></header>
-<main id="appMain"></main>
-<footer class="footer">Tíldero · Proyecto de práctica ortográfica · Tu progreso se guarda en este dispositivo.</footer>
-</div>
-<script>
-const BANK = [
- {id:1,topic:'Acentuación',q:'¿Cuál palabra está escrita correctamente?',opts:['cancion','canción','canciónn','cancíon'],a:1,why:'Las palabras agudas llevan tilde cuando terminan en vocal, n o s. Canción termina en n.'},
- {id:2,topic:'Acentuación',q:'Selecciona la escritura correcta.',opts:['arbol','árbol','arból','árból'],a:1,why:'Árbol es una palabra grave que termina en consonante distinta de n o s; por eso lleva tilde.'},
- {id:3,topic:'Acentuación',q:'¿Cuál palabra es esdrújula y está bien escrita?',opts:['telefono','teléfono','telefonó','télefono'],a:1,why:'Las palabras esdrújulas siempre llevan tilde: teléfono.'},
- {id:4,topic:'Acentuación',q:'Completa: Mañana tenemos un ___ de matemáticas.',opts:['examen','éxamen','examén','exámen'],a:0,why:'Examen es una palabra grave terminada en n; no lleva tilde.'},
- {id:5,topic:'Acentuación',q:'¿Qué opción completa la oración? «El ejercicio está muy ___.»',opts:['facil','fácil','facíl','fàcil'],a:1,why:'Fácil es grave y termina en consonante distinta de n o s, por eso lleva tilde.'},
- {id:6,topic:'Acentuación',q:'Elige la palabra correctamente acentuada.',opts:['tambien','tambièn','también','támbien'],a:2,why:'También es aguda y termina en n; lleva tilde en la última sílaba.'},
- {id:7,topic:'Acentuación',q:'¿Cuál oración está escrita correctamente?',opts:['Los jovenes leen.','Los jóvenes leen.','Los jóvénes leen.','Los jovenés leen.'],a:1,why:'Jóvenes es esdrújula; todas las esdrújulas llevan tilde.'},
- {id:8,topic:'Acentuación',q:'Completa: «Mi hermana ___ que estudiar».',opts:['tubo','tuvo','túvo','túbo'],a:1,why:'Tuvo, del verbo tener, se escribe con v y no lleva tilde.'},
- {id:9,topic:'Acentuación',q:'¿Cuál es la forma correcta?',opts:['lapiz','lápiz','lapíz','làpiz'],a:1,why:'Lápiz es grave y termina en z; por eso lleva tilde.'},
- {id:10,topic:'Acentuación',q:'Elige la opción correcta.',opts:['musica','música','músíca','musicá'],a:1,why:'Música es esdrújula y siempre lleva tilde.'},
- {id:11,topic:'Acentos diacríticos',q:'Completa: «___ eres mi mejor amigo».',opts:['Tu','Tú'],a:1,why:'Tú lleva tilde cuando es pronombre personal: tú eres. Tu sin tilde indica posesión: tu mochila.'},
- {id:12,topic:'Acentos diacríticos',q:'Completa: «___ cuaderno está en la mesa».',opts:['Él','El'],a:1,why:'El sin tilde acompaña a un sustantivo. Él con tilde es un pronombre: él llegó.'},
- {id:13,topic:'Acentos diacríticos',q:'¿Cuál pregunta está bien escrita?',opts:['Como te llamas?','¿Cómo te llamas?','¿Como té llamas?','Cómo te llamas?'],a:1,why:'Cómo lleva tilde en preguntas directas e indirectas.'},
- {id:14,topic:'Acentos diacríticos',q:'Completa: «Quiero ___ agua, por favor».',opts:['mas','más'],a:1,why:'Más con tilde expresa cantidad. Mas sin tilde equivale a “pero” y tiene uso formal.'},
- {id:15,topic:'Acentos diacríticos',q:'Elige la opción correcta: «No sé ___ vendrá».',opts:['cuando','cuándo'],a:1,why:'Cuándo lleva tilde en una pregunta indirecta: no sé cuándo vendrá.'},
- {id:16,topic:'Acentos diacríticos',q:'Completa: «Espero que me ___ permiso».',opts:['de','dé'],a:1,why:'Dé lleva tilde cuando es una forma del verbo dar. De sin tilde es una preposición.'},
- {id:17,topic:'B y V',q:'¿Cuál palabra está escrita correctamente?',opts:['escrivir','escribir','escríbir','ezcribir'],a:1,why:'Escribir se escribe con b. Una forma útil de recordarlo es practicar su familia: escribo, escribía, escritura.'},
- {id:18,topic:'B y V',q:'Completa: «Ayer el equipo ___ muy bien».',opts:['estubo','estuvo','estúbo','estuvoo'],a:1,why:'Estuvo es una forma del verbo estar y se escribe con v.'},
- {id:19,topic:'B y V',q:'Elige la escritura correcta.',opts:['también','tanbién','tambiém','tanvién'],a:0,why:'También se escribe con m antes de b.'},
- {id:20,topic:'B y V',q:'¿Qué palabra está bien escrita?',opts:['viblioteca','biblioteca','bibliotéca','bivlioteca'],a:1,why:'Biblioteca se escribe con b al inicio y b después de i.'},
- {id:21,topic:'B y V',q:'Completa: «Mi abuela ___ en Tlacolula».',opts:['vive','bive','vibe','vivee'],a:0,why:'Vive, del verbo vivir, se escribe con v. Practicar la familia vivir, vivía, vivienda ayuda a recordarlo.'},
- {id:22,topic:'B y V',q:'Selecciona la palabra correcta.',opts:['amavilidad','amabilidad','amavilidád','hamabilidad'],a:1,why:'Amabilidad se escribe con b; termina en -bilidad, como responsabilidad y posibilidad.'},
- {id:23,topic:'B y V',q:'¿Cuál oración es correcta?',opts:['Voy a votar por el proyecto.','Boy a votar por el proyecto.','Voy a botar por el proyecto.','Boi a votar por el proyecto.'],a:0,why:'Voy es una forma del verbo ir y se escribe con v. Votar es elegir; botar significa arrojar o hacer rebotar.'},
- {id:24,topic:'B y V',q:'Completa: «La ___ del grupo fue excelente».',opts:['conbibencia','convivencia','convivensia','convi vencia'],a:1,why:'Convivencia se escribe con v. Ayuda relacionarla con convivir.'},
- {id:25,topic:'C, S y Z',q:'¿Cuál palabra está bien escrita?',opts:['educasión','educación','educazión','edukación'],a:1,why:'Educación se escribe con c. Relaciónala con el verbo educar.'},
- {id:26,topic:'C, S y Z',q:'Elige la forma correcta.',opts:['decición','desisión','decisión','decizión'],a:2,why:'Decisión se escribe con s. Relaciónala con decidir, aunque la familia no siempre conserva la misma letra.'},
- {id:27,topic:'C, S y Z',q:'¿Cuál palabra está escrita correctamente?',opts:['hermoza','hermosa','hermossa','ermosa'],a:1,why:'Hermosa se escribe con s. Practica la familia hermoso, hermosa, hermosura.'},
- {id:28,topic:'C, S y Z',q:'Completa: «La ___ de la niña sorprendió a todos».',opts:['nines','niñez','niñes','niñéz'],a:1,why:'Niñez se escribe con z al final.'},
- {id:29,topic:'C, S y Z',q:'Selecciona la palabra correcta.',opts:['bellesa','belleza','bellezaa','veleza'],a:1,why:'Belleza se escribe con z. La terminación -eza aparece en palabras como tristeza y grandeza.'},
- {id:30,topic:'C, S y Z',q:'¿Cuál opción es correcta?',opts:['necesario','necezario','nesesario','necesarrio'],a:0,why:'Necesario se escribe con c y s. Es una palabra frecuente que conviene memorizar visualmente.'},
- {id:31,topic:'C, S y Z',q:'Completa: «La ___ fue muy interesante».',opts:['expocisión','exposición','exposisión','esposición'],a:1,why:'Exposición se escribe con x y s. La lectura y el uso en frases ayudan a fijar su escritura.'},
- {id:32,topic:'C, S y Z',q:'Elige la palabra correcta.',opts:['preciso','precizo','presiso','presizo'],a:0,why:'Preciso se escribe con c y s.'},
- {id:33,topic:'Otras confusiones',q:'Completa: «___ muchos libros en la biblioteca».',opts:['Ahí','Hay','Ay'],a:1,why:'Hay expresa existencia. Ahí indica lugar y ay expresa emoción o dolor.'},
- {id:34,topic:'Otras confusiones',q:'Completa: «Dejé la mochila ___, junto a la puerta».',opts:['hay','ahí','ay'],a:1,why:'Ahí indica un lugar: dejé la mochila ahí.'},
- {id:35,topic:'Otras confusiones',q:'¿Cuál palabra está correctamente escrita?',opts:['jente','gente','guente','génte'],a:1,why:'Gente se escribe con g. Antes de e e i, la g puede representar el sonido de j: gente, girar.'},
- {id:36,topic:'Otras confusiones',q:'Completa: «Espero que ___ terminado la tarea».',opts:['aya','halla','haya','alla'],a:2,why:'Haya puede ser una forma del verbo haber. Halla viene de hallar (encontrar).'},
- {id:37,topic:'Otras confusiones',q:'Elige la opción correcta: «Ya he ___ el trabajo».',opts:['echo','hecho'],a:1,why:'Hecho viene del verbo hacer. Echo viene de echar: “echo agua al vaso”.'},
- {id:38,topic:'Otras confusiones',q:'¿Cuál palabra está bien escrita?',opts:['mensaje','mensage','mensage','menzaje'],a:0,why:'Mensaje se escribe con j.'},
- {id:39,topic:'Otras confusiones',q:'Completa: «Ojalá que le ___ gustado el cuento».',opts:['halla','haya','alla','aya'],a:1,why:'Haya es una forma del verbo haber: haya gustado. Halla significa encuentra.'},
- {id:40,topic:'Otras confusiones',q:'¿Cuál opción está correctamente escrita?',opts:['yuvia','lluvia','llubia','yubia'],a:1,why:'Lluvia se escribe con ll. En algunas regiones ll e y suenan igual, así que ayuda recordar la palabra escrita y su familia: lluvioso.'}
-];
-const TOPICS=['Acentuación','Acentos diacríticos','B y V','C, S y Z','Otras confusiones'];
-const TIPS={
-'Acentuación':'Primero localiza la sílaba que suena más fuerte. Agudas: tilde si terminan en vocal, n o s. Graves: tilde si NO terminan en vocal, n o s. Esdrújulas: siempre llevan tilde.',
-'Acentos diacríticos':'La tilde puede cambiar la función o el significado: tú/tu, él/el, más/mas. Qué, cómo, cuándo y dónde llevan tilde en preguntas directas e indirectas.',
-'B y V':'En la mayoría de las variedades del español, b y v suenan igual. Aprende familias de palabras y expresiones completas: vivir, vivía, vivienda; escribir, escribo, escritura.',
-'C, S y Z':'Practica familias y terminaciones frecuentes: educar/educación, decidir/decisión, hermoso/hermosa, niñez, belleza. Hay excepciones: verifica las palabras dudosas en un diccionario.',
-'Otras confusiones':'Aprende las palabras dentro de frases: hay libros, está ahí, ¡ay!; he hecho la tarea, echo agua; ojalá haya tiempo.'
-};
-const STORAGE='tild ero-v1-data'.replace(' ','');
-let data=loadData(), view='home', quiz=null, selectedTopic='Todas', feedback=null;
-function loadData(){try{return JSON.parse(localStorage.getItem(STORAGE))||{name:'',attempts:[],words:[],daily:{}}}catch(e){return {name:'',attempts:[],words:[],daily:{}}}}
-function save(){localStorage.setItem(STORAGE,JSON.stringify(data))}
-function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
-function pct(a,b){return b?Math.round(a/b*100):0}
-function allAnswers(){return data.attempts.reduce((n,x)=>n+x.total,0)}
-function allCorrect(){return data.attempts.reduce((n,x)=>n+x.correct,0)}
-function topicStats(topic){let arr=data.attempts.filter(x=>x.topic===topic);return {total:arr.reduce((n,x)=>n+x.total,0),correct:arr.reduce((n,x)=>n+x.correct,0)}}
-function btn(label,action,cls='btn-primary'){return `<button class="btn ${cls}" data-action="${action}">${label}</button>`}
-function nav(){return `<nav class="tabs">${[['home','⌂ Inicio'],['practice','✎ Practicar'],['progress','▥ Mi progreso'],['words','☆ Mis palabras']].map(([v,l])=>`<button class="tab ${view===v?'active':''}" data-view="${v}">${l}</button>`).join('')}</nav>`}
-function home(){let done=Object.keys(data.daily).length;return `<section class="hero"><div><div class="eyebrow">Un poco cada día hace la diferencia</div><h2>¡Hola${data.name?', '+esc(data.name):''}! Vamos a escribir mejor.</h2><p>Practica tildes y palabras difíciles con retos breves. Aprende de cada error y observa cómo avanzas.</p>${btn('Comenzar a practicar','start','btn-primary')}</div><div class="hero-stat"><strong>${pct(allCorrect(),allAnswers())}%</strong><span>precisión acumulada</span></div></section>
-${!data.name?`<section class="card" style="margin-top:14px"><h3>Personaliza tu espacio</h3><p class="muted small">Escribe tu nombre o un apodo. Se guarda solamente en este dispositivo.</p><div class="field"><label for="studentName">Nombre o apodo</label><input id="studentName" maxlength="35" placeholder="Ej. Alex" value=""></div>${btn('Guardar nombre','saveName')}</section>`:''}
-<div class="grid"><article class="card"><div class="muted small">Preguntas respondidas</div><div class="metric">${allAnswers()}</div><div class="muted small">En todas tus prácticas</div></article><article class="card"><div class="muted small">Respuestas correctas</div><div class="metric">${allCorrect()}</div><div class="muted small">Sigue practicando</div></article><article class="card"><div class="muted small">Palabras guardadas</div><div class="metric">${data.words.length}</div><div class="muted small">Para volver a repasarlas</div></article></div>
-<div class="section-title"><h2>Elige tu reto</h2><span class="muted small">5 habilidades</span></div><div class="topic-grid">${TOPICS.map((t,i)=>`<button class="topic" data-topic="${t}"><span class="emoji">${['🔤','´','🅱️','✍️','🔎'][i]}</span><strong>${t}</strong><span class="muted small">${TIPS[t].slice(0,72)}…</span><div class="progress"><span style="width:${pct(topicStats(t).correct,topicStats(t).total)}%"></span></div><span class="muted small">${pct(topicStats(t).correct,topicStats(t).total)}% de acierto</span></button>`).join('')}</div>
-<div class="notice">Consejo: cuando te equivoques, lee la explicación y vuelve a intentar una pregunta similar. Aprender la razón del error vale más que memorizar la respuesta.</div>`}
-function practice(){return `<div class="section-title"><h2>Práctica ortográfica</h2><span class="muted small">10 preguntas por ronda</span></div><section class="panel"><p class="muted">Selecciona un tema. Recibirás una explicación después de cada respuesta.</p><div class="field"><label for="topicSelect">Tema</label><select id="topicSelect"><option>Todas</option>${TOPICS.map(t=>`<option ${selectedTopic===t?'selected':''}>${t}</option>`).join('')}</select></div><div class="card" style="background:var(--green2);box-shadow:none"><strong>Tip para recordar</strong><p id="tipText" class="small" style="margin-bottom:0">${TIPS[selectedTopic==='Todas'?'Acentuación':selectedTopic]}</p></div><div class="actions">${btn('Iniciar práctica','begin')}${btn('Guardar una palabra difícil','addWord','btn-light')}</div></section>`}
-function beginQuiz(){let pool=selectedTopic==='Todas'?[...BANK]:BANK.filter(x=>x.topic===selectedTopic);pool=pool.sort(()=>Math.random()-.5).slice(0,Math.min(10,pool.length));quiz={items:pool,index:0,correct:0,answered:0,topic:selectedTopic};feedback=null;view='quiz';render()}
-function quizView(){if(!quiz)return practice();if(quiz.index>=quiz.items.length)return resultView();let q=quiz.items[quiz.index];return `<section class="panel"><div class="panel-head"><div><div class="question-count">PREGUNTA ${quiz.index+1} DE ${quiz.items.length}</div><span class="pill">${q.topic}</span></div>${btn('Salir','quit','btn-plain')}</div><div class="progress"><span style="width:${Math.round(quiz.index/quiz.items.length*100)}%"></span></div><div class="question">${q.q}</div><div class="answers">${q.opts.map((o,i)=>`<button class="answer ${feedback?(i===q.a?'correct':i===feedback.chosen?'wrong':''):''}" data-answer="${i}" ${feedback?'disabled':''}>${String.fromCharCode(65+i)}. ${esc(o)}</button>`).join('')}</div>${feedback?`<div class="feedback ${feedback.ok?'good':'bad'}"><strong>${feedback.ok?'¡Correcto!':'Vamos a aprender de este error.'}</strong>${q.why}</div><div class="actions">${btn(quiz.index===quiz.items.length-1?'Ver resultados':'Siguiente pregunta','next')}</div>`:''}</section>`}
-function resultView(){let p=pct(quiz.correct,quiz.items.length);return `<section class="panel" style="text-align:center"><div style="font-size:2.4rem">${p>=80?'🎉':p>=60?'💪':'🌱'}</div><h2>${p>=80?'¡Muy bien!':p>=60?'¡Vas avanzando!':'Cada error te enseña algo'}</h2><div class="metric">${quiz.correct}/${quiz.items.length}</div><p class="muted">Respuestas correctas · ${p}% de precisión en esta ronda</p><div class="progress"><span style="width:${p}%"></span></div><p>${p>=80?'Sigue practicando para consolidar lo aprendido.':'Revisa las explicaciones y vuelve a practicar este tema en otro momento.'}</p><div class="actions" style="justify-content:center">${btn('Repetir práctica','retry')}${btn('Ver mi progreso','showProgress','btn-light')}${btn('Volver al inicio','home','btn-plain')}</div></section>`}
-function progress(){let recent=data.attempts.slice(-8).reverse();return `<div class="section-title"><h2>Mi progreso</h2><span class="muted small">Guardado en este dispositivo</span></div><div class="grid"><article class="card"><div class="muted small">Precisión total</div><div class="metric">${pct(allCorrect(),allAnswers())}%</div></article><article class="card"><div class="muted small">Rondas completadas</div><div class="metric">${data.attempts.length}</div></article><article class="card"><div class="muted small">Preguntas contestadas</div><div class="metric">${allAnswers()}</div></article></div><section class="panel"><h3>Precisión por habilidad</h3><p class="muted small">Las barras se calculan con tus respuestas registradas.</p>${TOPICS.map(t=>{let s=topicStats(t);return `<div class="bar-row"><span class="small">${t}</span><div class="bar-track"><span style="width:${pct(s.correct,s.total)}%"></span></div><span class="bar-value">${pct(s.correct,s.total)}%</span></div><div class="muted small">${s.correct} correctas de ${s.total} preguntas</div>`}).join('')}</section><div class="section-title"><h2>Últimas prácticas</h2></div>${recent.length?`<section class="panel">${recent.map(a=>`<div class="word"><div><strong>${esc(a.topic)}</strong><span class="muted small">${new Date(a.date).toLocaleDateString('es-MX')} · ${a.correct}/${a.total} aciertos</span></div><span class="pill">${pct(a.correct,a.total)}%</span></div>`).join('')}</section>`:`<div class="empty">Todavía no hay prácticas registradas. Completa tu primer reto para ver tu avance.</div>`}<div class="notice">Este registro es personal y local: si cambias de navegador o dispositivo, los datos no se transfieren automáticamente. Por ahora, el docente no puede ver este registro desde otra computadora.</div><div class="actions">${btn('Exportar mis resultados','export','btn-light')}${btn('Borrar todo mi progreso','clear','btn-plain')}</div>`}
-function words(){return `<div class="section-title"><h2>Mis palabras difíciles</h2></div><section class="panel"><p class="muted">Guarda las palabras que sueles escribir mal para repasarlas después.</p><div class="field"><label for="badWord">La escribí así</label><input id="badWord" maxlength="70" placeholder="Ej. cancion"></div><div class="field"><label for="goodWord">Forma correcta</label><input id="goodWord" maxlength="70" placeholder="Ej. canción"></div><div class="field"><label for="wordNote">Regla o recordatorio (opcional)</label><input id="wordNote" maxlength="140" placeholder="Ej. aguda terminada en n"></div><div class="actions">${btn('Guardar palabra','saveWord')}</div></section><div class="section-title"><h2>Tu lista</h2><span class="muted small">${data.words.length} palabras</span></div>${data.words.length?`<div class="word-list">${data.words.map((w,i)=>`<div class="word"><div><span class="muted small">${esc(w.bad)}</span><strong>${esc(w.good)}</strong>${w.note?`<span class="muted small">${esc(w.note)}</span>`:''}</div><button data-deleteword="${i}" aria-label="Eliminar palabra">Eliminar</button></div>`).join('')}</div>`:`<div class="empty">Aún no has guardado palabras. Agrega la primera que quieras recordar.</div>`}`}
-function render(){const main=document.getElementById('appMain');main.innerHTML=nav()+({home,practice,quiz:quizView,progress,words}[view]||home)();if(view==='practice'){let s=document.getElementById('topicSelect');s.value=selectedTopic;s.addEventListener('change',e=>{selectedTopic=e.target.value;document.getElementById('tipText').textContent=TIPS[selectedTopic==='Todas'?'Acentuación':selectedTopic]})}}
-document.addEventListener('click',e=>{let v=e.target.closest('[data-view]');if(v){view=v.dataset.view;feedback=null;render();return}let t=e.target.closest('[data-topic]');if(t){selectedTopic=t.dataset.topic;view='practice';render();return}let ans=e.target.closest('[data-answer]');if(ans&&quiz&&!feedback){let q=quiz.items[quiz.index],chosen=Number(ans.dataset.answer),ok=chosen===q.a;feedback={chosen,ok};quiz.answered++;if(ok)quiz.correct++;render();return}let del=e.target.closest('[data-deleteword]');if(del){data.words.splice(Number(del.dataset.deleteword),1);save();render();return}let b=e.target.closest('[data-action]');if(!b)return;switch(b.dataset.action){case'start':view='practice';selectedTopic='Todas';break;case'saveName':{let el=document.getElementById('studentName');data.name=(el?.value||'').trim();save();break}case'begin':beginQuiz();return;case'addWord':view='words';break;case'next':quiz.index++;feedback=null;if(quiz.index>=quiz.items.length){data.attempts.push({date:new Date().toISOString(),topic:quiz.topic,correct:quiz.correct,total:quiz.items.length});save()}break;case'retry':beginQuiz();return;case'showProgress':view='progress';break;case'home':view='home';break;case'quit':if(confirm('¿Quieres salir? Esta ronda no se guardará como práctica completada.')){quiz=null;feedback=null;view='practice'}break;case'saveWord':{let bad=document.getElementById('badWord').value.trim(),good=document.getElementById('goodWord').value.trim(),note=document.getElementById('wordNote').value.trim();if(!bad||!good){alert('Escribe la forma incorrecta y la correcta.');return}data.words.unshift({bad,good,note,date:new Date().toISOString()});save();view='words';break}case'export':{let blob=new Blob([JSON.stringify({name:data.name,attempts:data.attempts,words:data.words},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='mis-resultados-tildero.json';a.click();URL.revokeObjectURL(url);return}case'clear':if(confirm('Esto borrará las prácticas, las palabras guardadas y el nombre de este dispositivo. ¿Continuar?')){data={name:'',attempts:[],words:[],daily:{}};save()}break}render()});
-render();
-</script>
+  <div class="papel-picado" aria-hidden="true">
+    <span>✿</span><span>☠</span><span>✿</span><span>✦</span><span>☠</span><span>✿</span><span>✦</span><span>☠</span>
+  </div>
+
+  <header class="hero">
+    <div class="flores flores-izq" aria-hidden="true">✿ ✽ ✿</div>
+    <div class="hero-content">
+      <h1>Calaveritas <span>Literarias</span></h1>
+      <h2 class="eyebrow">CETIS 124 · Tlacolula de Matamoros, Oaxaca</span></h2>
+      <!--<p class="hero-subtitle">Versos, tradición y humor para celebrar el Día de Muertos</p>-->
+      <!--<a class="button button-light" href="#calaverita-principal">Leer la calaverita del profe</a>-->
+    </div>
+    <div class="flores flores-der" aria-hidden="true">✿ ✽ ✿</div>
+    <div class="papel-banner" aria-hidden="true">✦ · ✿ · ✦ · ☠ · ✦ · ✿ · ✦</div>
+  </header>
+
+  <main>
+     <section class="groups section-wrap" id="grupos">
+      <div class="section-heading">
+        <h2>Calaveritas por grupo</h2>
+        <p>Selecciona tu grupo para leer las publicaciones.</p>
+      </div>
+      <nav class="group-tabs" aria-label="Secciones por grupo">
+        <button class="tab active" data-group="1F" aria-pressed="true">1F</button>
+        <button class="tab" data-group="3F" aria-pressed="false">3F</button>
+        <button class="tab" data-group="3C" aria-pressed="false">3C</button>
+      </nav>
+      <div id="group-content" class="poem-grid" aria-live="polite"></div>
+    </section>
+
+    <section id="calaverita-principal" class="featured section-wrap">
+      <!--<div class="featured-label"><span>✦</span> PUBLICACIÓN PRINCIPAL <span>✦</span></div>-->
+      <article class="featured-card">
+        <div class="featured-art" aria-hidden="true">
+          <div class="skull">☠</div>
+          <div class="marigold">✿</div>
+          <p>Una calaverita<br>con sello docente</p>
+        </div>
+        <div class="featured-copy">
+          <p class="tag">Calaverita· Docente</p>
+          <h2>La calaca visita el CETIS 124</h2>
+          <p class="byline">Autor: Profesor Josué Hernández Barrita · CETIS 124</p>
+          <div class="poem" id="poem-profesor">
+            <p>
+La Calaca llegó a Tlacolula,<br>
+desde Oaxaca caminó,<br>
+buscando al profe Barrita,<br>
+¡y en el CETIS 124 lo encontró!
+</p>
+
+<p>
+El profe Barrita los quiso regañar,<br>
+pues sus alumnos no dejaban de hablar,<br>
+pero entre bromas y risas sin parar,<br>
+¡hasta la Calaca empezó a carcajear!
+</p>
+
+<p>
+La Calaca sacó su lista:<br>
+¡Hoy me los voy a llevar!<br>
+Pero antes de ir al panteón,<br>
+¡sus tareas van a entregar!
+</p>
+
+<p>
+Se acerca el Día de Muertos,<br>
+hay pan de cazuela que probar,<br>
+y en la ciudad de Tlacolula,<br>
+¡todos lo deben degustar!
+</p>
+
+<p>
+El veintinueve de octubre,<br>
+los alumnos van a participar,<br>
+en el festival de los muertos,<br>
+¡con sus disfraces van a brillar!
+</p>
+
+<p>
+La Calaca invitó a Barrita:<br>
+¡Vámonos al camposanto!<br>
+Él respondió: ¡Tengo clases!,<br>
+y la Muerte soltó su llanto.
+</p>
+
+<p>
+¡Mejor me quedo en el CETIS,<br>
+con mis alumnos quiero estar,<br>
+aunque a veces me hagan enojar,<br>
+¡de aquí no me quiero marchar!
+</p>     
+
+
+          </div>
+          <!--<div class="featured-footer"><span>✿</span> Seis estrofas · Humor escolar y tradición mexicana</div>-->
+        </div>
+      </article>
+    </section>
+
+    <section class="how-to section-wrap">
+      <div class="how-card">
+        <span class="how-icon">✍</span>
+        <div>
+          <h2>La tradición sigue viva</h2>
+          <p>Cada calaverita es una forma de contar, imaginar y reír. Gracias a los estudiantes que ponen su creatividad en cada verso.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-flower" aria-hidden="true">✿ ✽ ✿</div>
+    <p><strong>CETIS 124</strong> · Tlacolula de Matamoros, Oaxaca</p>
+    <p class="footer-small">Calaveritas literarias · Día de Muertos</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
