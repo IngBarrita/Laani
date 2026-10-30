@@ -108,14 +108,6 @@ const calaveritas = {
   ]
 },
 
-{
-  titulo: "xxx",
-  autor: "Getsemani Maheleth Alvarez Pavian",
-  estrofas: [
-    
-  ]
-},
-
   ],
 
   "3C": [
@@ -199,21 +191,13 @@ const calaveritas = {
   titulo: "La visita de la Catrina",
   autor: "Cesia Nuñez Mendez",
   estrofas: [
-    "Una noche muy oscura,\nla Catrina apareció,\ncon su vestido elegante\ny una sonrisa llegó.",
+    "Una noche muy oscura, la Catrina apareció, con su vestido elegante y una sonrisa llegó. Buscaba por las escuelas a quien llevarse ese día, pero nadie se esperaba tremenda algarabía.",
 
-    "Buscaba por las escuelas\na quien llevarse ese día,\npero nadie se esperaba\ntremenda algarabía.",
+    "Entró al salón de clases causando gran emoción. Los alumnos se escondieron debajo del pizarrón. ¿Eso era posible? Depende de cómo sea. La maestra, muy tranquila, le preguntó: «¿Qué haces aquí?».",
 
-    "Entró al salón de clases\ncausando gran emoción.\nLos alumnos se escondieron\ndebajo del pizarrón.",
+    "Y la Catrina respondió: «¡Vengo por alguien de aquí!». Los alumnos prometieron estudiar con dedicación, hacer sus tareas y poner mucha atención.",
 
-    "¿Eso era posible?\nDepende de cómo sea.\nLa maestra, muy tranquila,\nle preguntó: «¿Qué haces aquí?».",
-
-    "Y la Catrina respondió:\n«¡Vengo por alguien de aquí!».\nLos alumnos prometieron estudiar con dedicación,\nhacer sus tareas y poner mucha atención.",
-
-    "La Catrina se quedó pensando\nqué podía hacer,\npues con tantas promesas\nya no sabía a quién escoger.",
-
-    "Al final tomó su sombrero\ny decidió regresar:\n«Mejor vuelvo otro día,\nhoy los voy a perdonar».",
-
-    "Y entre risas y campanas\nla Catrina se marchó,\ndejando a todos contentos\nporque nadie se la llevó."
+    "La Catrina se quedó pensando qué podía hacer, pues con tantas promesas ya no sabía a quién escoger. Al final tomó su sombrero y decidió regresar: «Mejor vuelvo otro día, hoy los voy a perdonar». Y entre risas y campanas la Catrina se marchó, dejando a todos contentos porque nadie se la llevó."
   ]
 
 }
