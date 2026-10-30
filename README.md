@@ -1,2 +1,2 @@
-# Laani
-Aplicación educativa para mejorar la ortografía y la acentuación.
+# Calaveritas literarias
+Sitio web de las calaveritas literarias
