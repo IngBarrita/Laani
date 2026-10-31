@@ -131,10 +131,10 @@ const calaveritas = {
 
     "Y se fue la Catrina\nsin Frida, pero con arte,\nporque Frida no se muere,\nsolo cambia de estandarte."
   ]
-},
+}
+],
 
-
-  "3C": [
+"3C": [
     {
   titulo: "La Muerte visita el CETIS 124",
   autor: "Jorge Rubén Hernández Hernández",
