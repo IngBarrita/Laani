@@ -110,6 +110,32 @@ const calaveritas = {
 
   ],
 
+  
+{
+  titulo: "Frida Kahlo y la Catrina",
+  autor: "Getsemani Maheleth Alvarez Pavian",
+  estrofas: [
+    "En la Casa Azul de Coyoacán,\nFrida pintaba con pasión,\ncon sus cejas bien marcadas\ny flores en el corazón.",
+
+    "Llegó la Flaca Catrina\ncon paleta y con pincel:\n\"Frida, ya deja el retrato,\nte toca posar conmigo también\".",
+
+    "Frida le dijo riendo,\ncon su tequila en la mano:\n\"¡Ay, Flaca, no me asustas,\nyo ya viví entre quebrantos!\".",
+
+    "\"¿Llevarme? ¡Si yo me pinto\nhasta mi propio dolor!\nLe puse color al sufrimiento\ny lo volví una flor\".",
+
+    "La Catrina la observaba\ncon su vestido de huesos:\n\"Tú te pintas las heridas,\nyo solo colecciono restos\".",
+
+    "\"¿Te llevo por presumida?\n¿Por ruda y por contestona?\n¿Por amar a Diego Rivera\naunque te salió cana la broma?\".",
+
+    "Frida se puso sus aretes,\nsu rebozo de colores,\ny le dijo: \"Flaca hermosa,\n¡no me robes mis dolores!\".",
+
+    "La Muerte se conmovió,\ndejó el pincel a un lado:\n\"Quédate a seguir pintando,\nque México te ha extrañado\".",
+
+    "Y se fue la Catrina\nsin Frida, pero con arte,\nporque Frida no se muere,\nsolo cambia de estandarte."
+  ]
+},
+
+
   "3C": [
     {
   titulo: "La Muerte visita el CETIS 124",
