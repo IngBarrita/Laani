@@ -105,12 +105,10 @@ const calaveritas = {
     "La Muerte, confundida, se puso a pensar:\n—¡Ni estando en los huesos la puedo asustar!\nY se fue refunfuñando por todo el panteón:\n—¡Esta Josefa me ganó con pura convicción!",
 
     "Desde entonces la Flaca la recuerda con temor,\npues Josefa ni en la tumba perdió su valor.\nY cuentan que en las noches se escucha su risa:\n¡la mujer que desafió a la Muerte sin prisa!"
-  ]
+ ]
 },
 
-  ],
 
-  
 {
   titulo: "Frida Kahlo y la Catrina",
   autor: "Getsemani Maheleth Alvarez Pavian",
